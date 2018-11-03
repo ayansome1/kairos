@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import '../styles/register.css';
 
 // images being used
-import detectImg from '../assets/images/detect-img.jpg';
-import registerImg from '../assets/images/register-img.jpg';
+import detectImg from '../assets/images/image1.jpg';
+import registerImg from '../assets/images/image2.jpg';
 import galleryImg from '../assets/images/gallery-img.jpg';
 
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -20,17 +20,17 @@ class LandingPage extends Component {
             <Grid fluid>
                 <Row>
                     <Col xs={12} md={12} style={{ 'textAlign': 'center' }}>
-                        <h1>YOUR FACE IS YOUR IDENTITY</h1>
+                        <h1 className="margin-top-10">Demo for Bangalore Police</h1>
                         <br />
-                        <p>This application allows the user to capture an image and use facial recognition to recognize the face whose data has been captured</p>
-                        <p><b>Register. Detect. Check.</b></p>
+                        <p>Sentinel Identiti allows officers to enroll the faces of criminals and repeat offenders <br /> from the field and cross match the face with the crime database within seconds.</p>
+                        <p><b>Register. Identify. Within Seconds.</b></p>
                         <br />
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={1}>
-                    </Col>
-                    <Col xs={12} md={3} style={{ 'textAlign': 'center' }}>
+                    {/* <Col md={1}>
+                    </Col> */}
+                    <Col xs={12} mdOffset={2} md={4} style={{ 'textAlign': 'center' }}>
 
                         <Card>
                             <CardMedia
@@ -45,7 +45,8 @@ class LandingPage extends Component {
                             </CardActions>
                         </Card>
                     </Col>
-                    <Col xs={12} md={3} style={{ 'textAlign': 'center' }}>
+                    <div className="padding-10"/>
+                    <Col xs={12} md={4} style={{ 'textAlign': 'center' }}>
                         <Card>
                             <CardMedia
                             >
@@ -59,7 +60,9 @@ class LandingPage extends Component {
                             </CardActions>
                         </Card>
                     </Col>
-                    <Col xs={12} md={3} style={{ 'textAlign': 'center' }}>
+                    <div className="padding-10"/>
+
+                    {/* <Col xs={12} md={3} style={{ 'textAlign': 'center' }}>
                         <Card>
                             <CardMedia
                             >
@@ -70,11 +73,11 @@ class LandingPage extends Component {
                                 Deprecated for now due to API call limit
                             </CardText>
                             <CardActions>
-                                {/* <Link to={'/gallery'}><FlatButton className='flat-btn' label="GALLERY" /></Link> */}
+                                <Link to={'/gallery'}><FlatButton className='flat-btn' label="GALLERY" /></Link>
                                 <FlatButton className='flat-btn' label="GALLERY" />
                             </CardActions>
                         </Card>
-                    </Col>
+                    </Col> */}
                 </Row>
             </Grid>
         );

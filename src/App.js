@@ -41,7 +41,7 @@ class App extends Component {
       <div>
         <AppBar
           className='app-bar'
-          title='CAMERIA'
+          title='OFDG IDENTITI DEMO'
           onLeftIconButtonClick={() => this.toggleDrawerMenu()}
           zDepth={2}
         />
