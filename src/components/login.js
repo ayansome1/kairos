@@ -39,7 +39,7 @@ class Login extends Component {
            <div>
                 <Card>
                     <CardMedia>
-                        <img className='loginImage' src={detectImg} alt="detect" />
+                        <img src={detectImg} alt="detect" />
                     </CardMedia>
                     <CardText>
                         <TextField
