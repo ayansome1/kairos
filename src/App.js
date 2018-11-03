@@ -36,6 +36,10 @@ class App extends Component {
     });
   }
 
+  hideDrawer = () => {
+    return this.props.location.pathname.indexOf('kairos') > -1;
+  }
+
   render() {
     return (
       <div>
@@ -43,9 +47,10 @@ class App extends Component {
           className='app-bar'
           title='OFDG IDENTITI DEMO'
           onLeftIconButtonClick={() => this.toggleDrawerMenu()}
+          showMenuIconButton={!this.hideDrawer()}
           zDepth={2}
         />
-        <Drawer
+       <Drawer
           docked={false}
           width={200}
           open={this.state.toggle}
