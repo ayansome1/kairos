@@ -26,6 +26,10 @@
     height: 250px!important;
 }
 
+.loginImage {
+    height: 400px!important;
+}
+
 .gallery-data {
     padding: 15px;
 }

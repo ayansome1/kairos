@@ -4,6 +4,9 @@ import '../styles/register.css';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import { withRouter } from 'react-router-dom'
+import { Card, CardActions, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import detectImg from '../assets/images/loginimg.png';
+
 class Login extends Component {
 
     constructor(props) {
@@ -33,28 +36,31 @@ class Login extends Component {
 
     render() {
         return (
-           <div className="padding-20">
-                <TextField
-                    name="name"
-                    hintText="Name"
-                    floatingLabelText="Name"
-                    fullWidth
-                    onChange={(event) => this.handleInput(event)}
-                />
-                <TextField
-                    name="pin"
-                    hintText="Pin"
-                    floatingLabelText="Pin"
-                    fullWidth
-                    onChange={(event) => this.handleInput(event)}
-                />
-                <div className="margin-top-30 margin-left-30">
-
-                    {/* <Link to={'/home'} className='register-button'>Login</Link> */}
-
-
-                    <RaisedButton className='register-button' onClick={this.login} label="LOGIN" primary={true} style={{ 'margin': 16 }} />
-                </div>
+           <div>
+                <Card>
+                    <CardMedia>
+                        <img className='loginImage' src={detectImg} alt="detect" />
+                    </CardMedia>
+                    <CardText>
+                        <TextField
+                            name="name"
+                            hintText="Name"
+                            floatingLabelText="Name"
+                            fullWidth
+                            onChange={(event) => this.handleInput(event)}
+                        />
+                        <TextField
+                            name="pin"
+                            hintText="Pin"
+                            floatingLabelText="Pin"
+                            fullWidth
+                            onChange={(event) => this.handleInput(event)}
+                        />
+                        <div className="margin-top-30 margin-left-30">
+                            <RaisedButton className='register-button' onClick={this.login} label="LOGIN" primary={true} style={{ 'margin': 16 }} />
+                        </div>
+                    </CardText>
+                </Card>
            </div>
         );
     }
